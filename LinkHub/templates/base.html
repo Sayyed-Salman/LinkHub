@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.png') }}" type="image/x-icon">
+    <title>LinkHub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <div class="header">
+        <h1 class="logo-text">LinkHub</h1>
+        <p class="tagline">Share resources with ease.</p>
+        <img src="{{ url_for('static', filename='gh-logo.svg') }}" alt="github">
+        <button>Add Resource</button>
+    </div>
+    <div class="links">
+        <div class="resource" onclick="location.href='https://www.google.com'">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+        <div class="resource">
+            <div class="description">
+                How to make a cake.
+            </div>
+            <p class="name">Salman Sayyed</p>
+        </div>
+    </div>
+</body>
+</html>
