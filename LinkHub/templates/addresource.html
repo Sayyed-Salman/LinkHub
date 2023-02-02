@@ -13,16 +13,29 @@
         <img src="{{ url_for('static', filename='icon.png') }}" alt="logo" width="50px">
         <a href="{{ url_for('home.index_sus') }}"><h1>Linkhub</h1></a>
     </div>
-    <form action="" class="form-addres">
-        <input type="text" name="description" id="description" placeholder="Description">
+    <form action="" class="form-addres" method="post">
+        <input type="text" name="description" id="description" 
+        placeholder="Description">
         <input type="text" name="name" id="name"
         placeholder="Name">
         <input type="text" name="link" id="link"
         placeholder="Link">
-        <input type="email" name="emai" id="email"
+        <input type="email" name="email" id="email"
         placeholder="Email">
         <input type="submit" value="Add Resource">
     </form>
+    
+    {% for category, messages in get_flashed_messages(with_categories=true) %}
+        <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ messages }}
+        </div>
+    {% endfor %}
+    
+    <!-- <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Indicates a dangerous or potentially negative action.
+    </div> -->
 
 </body>
 </html>

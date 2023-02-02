@@ -1,4 +1,4 @@
-from LinkHub import init_app
+from LinkHub import init_app, db
 
 app = init_app()
 

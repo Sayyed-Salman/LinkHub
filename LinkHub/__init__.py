@@ -14,6 +14,11 @@ def init_app():
 
     db.init_app(app)
 
+    from LinkHub.models import Link
+
+    # with app.app_context():
+    #     db.create_all()
+
     from LinkHub.routes import home_blueprint, new_blueprint
     app.register_blueprint(home_blueprint)
     app.register_blueprint(new_blueprint)
