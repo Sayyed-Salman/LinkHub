@@ -17,9 +17,19 @@
         <h1 class="logo-text">LinkHub</h1>
         <p class="tagline">Share resources with ease.</p>
         <img src="{{ url_for('static', filename='gh-logo.svg') }}" alt="github">
-        <button>Add Resource</button>
+        <button onclick="window.location.href='{{ url_for('home.add_resource') }}'">Add Resource</button>
     </div>
     <div class="links">
+        {% for i in data %}
+        <div class="resource" onclick="location.href='{{ i.link }}'">
+            <div class="description">
+                {{ i.description }}
+            </div>
+            <p class="name">
+                {{ i.name }}
+            </p>
+        </div>
+        {% endfor %}
         <div class="resource" onclick="location.href='https://www.google.com'">
             <div class="description">
                 How to make a cake.
