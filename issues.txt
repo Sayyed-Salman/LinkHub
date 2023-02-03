@@ -1,0 +1,4 @@
+Security :
+    1) Anyone can delete a task if they are smart enough 
+        Url path is not secured, cause i am trying to make it to MVP asap.
+

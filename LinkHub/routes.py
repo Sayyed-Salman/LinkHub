@@ -67,3 +67,25 @@ def add_resource():
 
             return redirect(url_for('home.index_sus'))
     return render_template('addresource.html')
+
+
+@home_blueprint.route("/admin", methods=['GET', 'POST'])
+def admin():
+    if request.method == 'POST':
+        if request.form['username'] == "salmansyyd" and request.form['password'] == "salmansyyd":
+            bingo = Link.query.all()
+            return render_template('checkall.html', data=bingo)
+        else:
+            return "<h1> Fuck off nigger </h1>"
+    return render_template('admin.html')
+
+
+@home_blueprint.route("/admin/delete/<int:id>")
+def delete_link(id):
+    link = Link.query.get_or_404(id)
+    try:
+        db.session.delete(link)
+        db.session.commit()
+        return redirect("/")
+    except:
+        return "There was an error !"
