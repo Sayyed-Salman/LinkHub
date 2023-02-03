@@ -16,7 +16,10 @@
     <div class="header">
         <h1 class="logo-text">LinkHub</h1>
         <p class="tagline">Share resources with ease.</p>
-        <img src="{{ url_for('static', filename='gh-logo.svg') }}" alt="github">
+        <div class="redirects">
+            <img src="{{ url_for('static', filename='gh-logo.svg') }}" alt="github" onclick="window.location.href=''">
+            <img src="{{ url_for('static', filename='links.svg') }}" alt="links" onclick="window.location.href='https://sayyed-salman.github.io/LinkToNotes/'" width="40px">
+        </div>
         <button onclick="window.location.href='{{ url_for('home.add_resource') }}'">Add Resource</button>
     </div>
     <div class="links">

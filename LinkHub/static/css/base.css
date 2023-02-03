@@ -14,7 +14,12 @@
     align-items: center;
     margin-top: 1rem;
 }
-
+.header .redirects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
 .header h1 {
     font-family: 'IBM Plex Mono';
     font-size: 5rem;
@@ -78,6 +83,10 @@
     background-color: blueviolet;
 }
 
+.resource:hover .description{
+    color: black;
+}
+
 .resource:hover{
     background-color: black;
     color: #D9D9D9;
@@ -97,4 +106,20 @@
 
 .resource .name {
     font-weight: 600;
+}
+
+@media only screen and (max-width: 600px){
+
+    .header h1{
+        font-size: 12vw;
+        font-weight: bolder;
+    }
+
+    .header p {
+        font-size: 5vw;
+    }
+
+    .links{
+        background-color: white;
+    }
 }

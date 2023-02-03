@@ -42,7 +42,7 @@ data = [
 
 @home_blueprint.route("/")
 def index_sus():
-    return render_template('base.html', data=Link.query.all())
+    return render_template('base.html', data=Link.query.order_by(Link.id.desc()))
 
 
 @home_blueprint.route("/testserver")
